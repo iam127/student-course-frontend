@@ -1,70 +1,237 @@
-# Getting Started with Create React App
+# 🎓 Student Course Management System - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicación web desarrollada con React que proporciona una interfaz moderna e intuitiva para la gestión de estudiantes, cursos y matrículas universitarias.
 
-## Available Scripts
+## 👨‍💻 Autor
 
-In the project directory, you can run:
+**Matias Galvan Guerrero**  
+TECSUP - Instituto de Educación Superior Tecnológica  
+Ciclo: 4to | Curso: Desarrollo de Aplicaciones Web
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Tecnologías Utilizadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React 18** - Librería de interfaz de usuario
+- **React Router DOM** - Navegación entre páginas
+- **Axios** - Cliente HTTP para consumir API
+- **CSS3** - Estilos y diseño responsive
+- **JavaScript ES6+** - Lenguaje de programación
+- **Render** - Plataforma de despliegue
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📋 Características
 
-### `npm run build`
+- ✅ Interfaz moderna y responsive
+- ✅ Gestión completa de estudiantes (CRUD)
+- ✅ Gestión completa de cursos (CRUD)
+- ✅ Sistema de matrículas interactivo
+- ✅ Navegación fluida entre secciones
+- ✅ Integración con API REST
+- ✅ Diseño profesional con gradientes
+- ✅ Experiencia de usuario optimizada
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🗂️ Estructura del Proyecto
+```
+frontend/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── StudentList.js
+│   │   ├── StudentForm.js
+│   │   ├── CourseList.js
+│   │   ├── CourseForm.js
+│   │   └── EnrollmentManager.js
+│   ├── services/
+│   │   └── api.js
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   └── index.css
+├── package.json
+└── README.md
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🔧 Configuración Local
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### **Requisitos Previos**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Node.js 16+ y npm
+- Git
+- Backend API ejecutándose (ver [student-course-backend](https://github.com/iam127/student-course-backend))
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **Instalación**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Clonar el repositorio:**
+```bash
+git clone https://github.com/iam127/student-course-frontend.git
+cd student-course-frontend
+```
 
-## Learn More
+2. **Instalar dependencias:**
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Configurar URL de la API:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Edita `src/services/api.js` y actualiza la URL del backend:
+```javascript
+const API_URL = 'http://localhost:8080/api';
+// O para producción:
+// const API_URL = 'https://student-course-api-42yh.onrender.com/api';
+```
 
-### Code Splitting
+4. **Iniciar aplicación en modo desarrollo:**
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+La aplicación estará disponible en: `http://localhost:3000`
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📦 Scripts Disponibles
+```bash
+# Iniciar en modo desarrollo
+npm start
 
-### Making a Progressive Web App
+# Crear build de producción
+npm run build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Ejecutar tests
+npm test
 
-### Advanced Configuration
+# Analizar dependencias
+npm run analyze
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🌐 Despliegue en Render
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+La aplicación está desplegada en Render y disponible en:
 
-### `npm run build` fails to minify
+**URL de la Aplicación:** https://student-course-frontend.onrender.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### **Configuración de Despliegue:**
+- **Build Command:** `npm install && npm run build`
+- **Publish Directory:** `build`
+- **Environment:** Static Site
+
+---
+
+## 🧩 Componentes Principales
+
+### **StudentList**
+Muestra todos los estudiantes registrados con sus cursos matriculados.
+
+### **StudentForm**
+Formulario para crear y editar información de estudiantes.
+
+### **CourseList**
+Lista todos los cursos disponibles con información detallada.
+
+### **CourseForm**
+Formulario para administrar cursos (crear/editar).
+
+### **EnrollmentManager**
+Interfaz interactiva para gestionar matrículas de estudiantes en cursos.
+
+---
+
+## 🎯 Funcionalidades
+
+### **Gestión de Estudiantes**
+- Crear nuevo estudiante
+- Ver lista de estudiantes
+- Editar información del estudiante
+- Eliminar estudiante
+- Visualizar cursos matriculados
+
+### **Gestión de Cursos**
+- Crear nuevo curso
+- Ver lista de cursos
+- Editar información del curso
+- Eliminar curso
+- Ver estudiantes inscritos
+
+### **Sistema de Matrículas**
+- Matricular estudiante en curso
+- Desmatricular estudiante de curso
+- Vista interactiva con selección de estudiante y curso
+- Tabla de matrículas actuales
+
+---
+
+## 🎨 Paleta de Colores
+```css
+Primary: #667eea (Púrpura)
+Secondary: #764ba2 (Morado)
+Background: #f5f5f5 (Gris claro)
+Cards: #ffffff (Blanco)
+Text: #333333 (Gris oscuro)
+```
+
+---
+
+## 📱 Responsive Design
+
+La aplicación está optimizada para:
+- 📱 Móviles (320px - 768px)
+- 📱 Tablets (768px - 1024px)
+- 💻 Desktop (1024px+)
+
+---
+
+## 🔗 Integración con Backend
+
+La aplicación consume los siguientes endpoints:
+```javascript
+// Estudiantes
+GET    /api/students
+GET    /api/students/{id}
+POST   /api/students
+PUT    /api/students/{id}
+DELETE /api/students/{id}
+
+// Cursos
+GET    /api/courses
+GET    /api/courses/{id}
+POST   /api/courses
+PUT    /api/courses/{id}
+DELETE /api/courses/{id}
+
+// Matrículas
+POST   /api/students/{studentId}/courses/{courseId}
+DELETE /api/students/{studentId}/courses/{courseId}
+```
+
+---
+
+## 🔗 Enlaces Relacionados
+
+- **Backend API:** [student-course-backend](https://github.com/iam127/student-course-backend)
+- **API en Producción:** [https://student-course-api-42yh.onrender.com](https://student-course-api-42yh.onrender.com)
+- **Documentación React:** [https://react.dev](https://react.dev)
+
+---
+
+## Realizado por
+
+**Matias Galvan Guerrero**  
+Estudiante de Desarrollo de Software - TECSUP  
+📧 Email: matias.galvan@tecsup.edu.pe  
+🔗 GitHub: [@iam127](https://github.com/iam127)
+
+---
+
+- TECSUP - Instituto de Educación Superior Tecnológica
+- Docentes del curso de Desarrollo de Aplicaciones Web
+- Comunidad de React y Spring Boot
