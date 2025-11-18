@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-// URL de tu backend desplegado en Render
 const API_URL = 'https://student-course-api-42yh.onrender.com/api';
 
 export const studentService = {
